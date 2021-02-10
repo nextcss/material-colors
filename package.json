@@ -1,0 +1,37 @@
+{
+  "name": "@nextcss/material-colors",
+  "version": "0.0.3-beta",
+  "description": "material-colors module for Next.css.",
+  "license": "MIT",
+  "main": "dist/material-colors.css",
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "nextcss"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Zsolt Tovis",
+    "email": "tovis.zsolt@gmail.com",
+    "url": "https://toviszsolt.github.io/"
+  },
+  "funding": "https://paypal.me/toviszsolt",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextcss/material-colors.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nextcss/material-colors/issues"
+  },
+  "homepage": "https://github.com/nextcss",
+  "scripts": {
+    "build": "node-sass --output-style compact src/material-colors.scss dist/material-colors.css",
+    "watch": "node-sass --watch --output-style compact src/material-colors.scss dist/material-colors.css"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
