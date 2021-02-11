@@ -42,11 +42,13 @@ import '@nextcss/material-colors';
 ```
 
 Selector formula
+
 **`[state:]prefix-color[-scale]`**
 
 #### state
 
 After _state_ must use colon, _state_ is not required.
+
 `hover`,`active`,`focus`,`focus-in`
 
 #### prefix
