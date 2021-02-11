@@ -52,21 +52,25 @@ After _state_ must use colon, _state_ is not required.
 #### prefix
 
 After _prefix_ must use hyphen, _state_ is required.
+
 `fg` - foreground, `bg` - background, `bo` - border
 
 #### color (scalable)
 
 After _color_ must be set _scale_ value. _color_ is required.
+
 `red`, `pink`, `purple`, `deep-purple`, `indigo`, `blue`, `light-blue`,`cyan`,`teal`,`green`,`light-green`,`lime`,`yellow`,`amber`,`orange`,`deep-orange`,`brown`,`grey`,`blues-grey`
 
 #### color (not scalable)
 
 After _color_ can not set _scale_ value. _color_ is required.
+
 `black`,`white`
 
 #### scale
 
 Before _scale_ must use hyphen, _scale_ is required for scalable _color_ only.
+
 `100`,`200`,`300`,`400`,`500`,`600`,`700`,`800`,`900`
 
 ## License

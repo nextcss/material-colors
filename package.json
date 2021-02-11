@@ -1,6 +1,6 @@
 {
   "name": "@nextcss/material-colors",
-  "version": "0.0.5-beta",
+  "version": "0.0.6-beta",
   "description": "material-colors module for Next.css.",
   "license": "MIT",
   "main": "dist/material-colors.css",
