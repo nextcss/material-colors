@@ -1,67 +1,40 @@
 @import 'variables';
 
-$states: ('hover', 'active', 'focus', 'focus-in');
+$properties: (
+  'fg': 'color',
+  'bg': 'background-color',
+  'b': 'border-color',
+);
+
+$states: (
+  'hover': 'hover',
+  'active': 'active',
+  'focus': 'focus',
+  'focus-in': 'focus-within',
+);
 
 // Foreground color
 @each $name, $list in $color-list-all {
   @each $scale, $color in $list {
-    @if $scale == 'base' {
-      .fg-#{$name} {
-        color: $color;
-      }
-      @each $state in $states {
-        .#{$state}\:fg-#{$name}:#{$state} {
-          color: $color;
+    @each $query, $prop in $properties {
+      @if $scale == 'base' {
+        .#{$query}-#{$name} {
+          #{$prop}: $color;
         }
-      }
-    } @else {
-      .fg-#{$name}-#{$scale} {
-        color: $color;
-      }
-      @each $state in $states {
-        .#{$state}\:fg-#{$name}-#{$scale}:#{$state} {
-          color: $color;
+        @each $prefix, $state in $states {
+          .#{$prefix}\:#{$query}-#{$name}:#{$state} {
+            #{$prop}: $color;
+          }
         }
-      }
-    }
-  }
-}
-
-// Background colot
-@each $name, $list in $color-list-all {
-  @each $scale, $color in $list {
-    @if $scale == 'base' {
-      .bg-#{$name} {
-        background-color: $color;
-      }
-      @each $state in $states {
-        .#{$state}\:bg-#{$name}:#{$state} {
-          background-color: $color;
+      } @else {
+        .#{$query}-#{$name}-#{$scale} {
+          #{$prop}: $color;
         }
-      }
-    } @else {
-      .bg-#{$name}-#{$scale} {
-        background-color: $color;
-      }
-      @each $state in $states {
-        .#{$state}\:bg-#{$name}-#{$scale}:#{$state} {
-          background-color: $color;
+        @each $prefix, $state in $states {
+          .#{$prefix}\:#{$query}-#{$name}-#{$scale}:#{$state} {
+            #{$prop}: $color;
+          }
         }
-      }
-    }
-  }
-}
-
-// Border-color
-@each $name, $list in $color-list-all {
-  @each $scale, $color in $list {
-    @if $scale == 'base' {
-      .bo-#{$name} {
-        border-color: $color;
-      }
-    } @else {
-      .bo-#{$name}-#{$scale} {
-        border-color: $color;
       }
     }
   }
